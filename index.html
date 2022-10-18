@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+</head>
+    <body>
+        <h1>Responsive Redesign</h1>
+        <div class = "content">
+            <h2>Project Overview</h2>
+            <p> <span class = "bold"> The task: </span>  This project consisted of three parts:</p>
+                <ol>
+                    <li>Identify usability problems with an existing webpage.</li>
+                    <li>Create low-fidelity wireframes and high-fidelity prototypes of a new design 
+                        that addresses those problems and is responsive to different screen sizes.</li>
+                    <li>Finally, develop the redesigned webpage.</li>
+                </ol>
+            <div><p><span class = "bold">The flawed webpage: </span>  <a href="https://skyandtelescope.org/interactive-sky-chart/" target="_blank"> A night sky tracker</a> 
+                made by skyandtelescope.org. Users can view how different parts of the night sky look at various times and locations.</p></div>
+            
+            <div class = "image-and-caption">
+                    <img id="webpage" src="images/webpage.PNG" alt="Screenshot of Sky and Telescope's interactive sky chart webpage.">
+                    <p class = "caption">Sky & Telescope's interactive sky chart webpage. </p>
+            </div>
+
+            <p>I chose this page because although the service it offers works excellently, the interface has some problems, which I discovered one night when I tried to use 
+                the page on my phone to determine what constellations I was seeing.</p>
+                <div class = "center">
+                    <div class = "two-panes">
+                        <div class = "image-and-caption">
+                        <img class = "mobile" src="images/mobile1.jpg" alt="A mobile view of the webpage showing many buttons.">
+                        <p class = "caption">There are a lot of buttons... which ones do I actually <br> need in order to identify constellations?</p>
+                        </div>
+                        <div class = "image-and-caption">
+                            <img class = "mobile" src="images/mobile2.jpg" alt="A mobile view of the webpage showing a difficult to read star chart.">
+                            <p class = "caption"> How am I meant to read anything on this star chart?</p>
+                        </div>
+                    </div>
+                </div>
+
+            <h2>Identifying Usability Problems</h2>
+            <p>The page's design flaws can be broken into issues relating to usability, learnability, and memorability:</p>
+            <table>
+                <tr>
+                    <th>Usability</th>
+                    <th>Learnability</th>
+                    <th>Memorability</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>In order to update the date or time, a submit button must be pressed, which is less efficient than automatically 
+                                updating the page when the date or time is changed.</li>
+                            <li>
+                                On mobile, the star chart shrinks such that pieces of text overlap one another, making it difficult to read
+                                the chart's information.
+                            </li>
+                            <li>
+                                On mobile, you cannot press the change time buttons while also viewing how the sky image moves as a result, so 
+                                the user is required to scroll back and forth to see the effect of their actions.
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>The controls for setting the date and location are the only settings needed to begin using the page, 
+                                so these options should be separated in the top left. Currently, it is difficult for new users to determine what they need to interact with.</li>
+                            <li>
+                                The area of the sky that is displayed can be moved by dragging the window on the sky chart, a feature that is not at
+                                signaled to the user.
+                            </li>
+                            <li>
+                                There is no clear hierarchy, as headers have barely more weight than other text, and the interactable components
+                                are mostly not aligned with one another.
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>The "Display Options" are not organized, making it difficult for a returning user to remember where certain
+                                settings are located.
+                            </li>
+                            <li>
+                                Returning users who recall changing what part of the sky is displayed by clicking and dragging might
+                                drag the sky image itself, which does not work. This feature could be included to eliminate the need for users
+                                to remember exactly where this control is located.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <p>I also analyzed the page's accessibility via WebAIM WAVE, which revealed
+            that the dropdown menus and checkboxes are missing labels to explain their functions. This means that users who employ a
+            screen reader might have difficulty knowing what each option does. Additionally, &lttable&gt HTML elements are used to position
+            components of the page, which could also confuse screen readers expecting tabular data to read.</p>
+            <h2>Redesign</h2>
+            <p>
+                I first created low-fidelity wireframes showcasing how the page's design could be improved for desktop, tablets, and mobile devices.
+            </p>
+            <div class = "image-and-caption">
+              <img id = "wireframe1" src="images/wireframe1.PNG" alt="A wireframe for the redesigned desktop page.">
+              <p class = "caption">Desktop wireframe.</p>
+            </div>
+            <div class = "center">
+                <div class = "two-panes">
+                    <div class = "image-and-caption">
+                        <img class = "wireframe2" src="images/wireframe2.PNG" alt="A wireframe for the redesigned tablet page.">
+                        <p class = "caption">Tablet wireframe.</p>
+                    </div>
+                    <div class = "image-and-caption">
+                        <img class = "wireframe2" src="images/wireframe3.PNG" alt="A wireframe for the redesigned mobile page.">
+                        <p class = "caption"> Mobile wireframe.</p>
+                    </div>
+                </div>
+            </div>
+            <p>Then, I converted the wireframes into high-fidelity prototypes. To ensure that the style of the page remained consistent,
+                I created the following style guide:
+            </p>
+            <div class = "image-and-caption">
+                <img id = "guide" src="images/guide.PNG" alt="A style guide showcasing resusable components of the page.">
+                <p class = "caption">A style guide showcasing the resuable elements of the redesigned page.</p>
+            </div>
+            <p>
+                Like with the wireframes, I created a high-fidelity prototype of the page for desktop, tablet, and mobile devices. 
+                They are annotated with explanations of how a developer can implement the design and ensure the page is responsive to different screen sizes.
+            </p>
+
+            <div class = "image-and-caption">
+                <img id = "hifi1" src="images/hifi1.PNG" alt="A high-fidelity prototype for the redesigned desktop page.">
+                <p class = "caption">Desktop prototype.</p>
+            </div>
+            <div class = "center">
+                <div class = "two-panes">
+                    <div class = "image-and-caption">
+                        <img class = "hifi2" src="images/hifi2.PNG" alt="A high-fidelity prototype for the redesigned tablet page.">
+                        <p class = "caption">Tablet prototype.</p>
+                    </div>
+                    <div class = "image-and-caption">
+                        <img class = "hifi2" src="images/hifi3.PNG" alt="A high-fidelity prototype for the redesigned mobile page.">
+                        <p class = "caption"> Mobile prototype.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <h2>The Result</h2>
+            <p> Finally, I developed the redesigned page, <a href="https://flusteredflamingo123.github.io/redesigned-page/" target="_blank">accessible here</a></p>
+            <div class = "image-and-caption">
+                <img id="final" src="images/final.PNG" alt="A screenshot of the redesigned page.">
+                <p class = "caption"> The final redesigned page.</p>
+            </div>
+        </div>
+    </body>
+</html>
